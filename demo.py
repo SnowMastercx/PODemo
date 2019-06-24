@@ -18,7 +18,8 @@ el1 = driver.find_element_by_id("com.xueqiu.android:id/user_profile_icon")
 el1.click()
 el2 = driver.find_element_by_id("com.xueqiu.android:id/tv_login")
 el2.click()
-el3 = driver.find_element_by_id("com.xueqiu.android:id/tv_login_by_phone_or_others")
+el3 = driver.find_element_by_id(
+    "com.xueqiu.android:id/tv_login_by_phone_or_others")
 el3.click()
 
 driver.quit()

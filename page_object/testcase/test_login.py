@@ -1,12 +1,14 @@
 from page_object.page.App import App
 import pytest
 
+
 class TestLogin(object):
     @classmethod
     def setup_class(cls):
-        cls.profilePage=App.main().gotoProfile()
+        cls.profilePage = App.main().gotoProfile()
+
     def setup_method(self):
-        self.loginPage=self.profilePage.gotoLogin()
+        self.loginPage = self.profilePage.gotoLogin()
 
     @pytest.mark.parametrize("user, pw, msg", [
         ("156005347600", "111111", "手机号码"),

@@ -11,19 +11,20 @@ from web.page_object.testcase.BaseTestCase import BaseTestCase
 class TestXueqiu(BaseTestCase):
 
     def setup(self):
-        self.driver=webdriver.Remote(desired_capabilities=DesiredCapabilities.CHROME)
+        self.driver = webdriver.Remote(
+            desired_capabilities=DesiredCapabilities.CHROME)
         self.driver.implicitly_wait(30)
         self.driver.get("https://xueqiu.com/")
-        self.main=MainPage(self.driver)
+        self.main = MainPage(self.driver)
 
     def test_search(self):
         self.main.search("alibaba").follow("1688")
-        #todo: add assertion
+        # todo: add assertion
 
     def test_profile(self):
-        profile=ProfilePage(self.driver)
+        profile = ProfilePage(self.driver)
         profile.login()
-        selected=profile.gotoSelected()
+        selected = profile.gotoSelected()
         selected.select("alibaba", "1688")
 
     def test_log(self):

@@ -1,6 +1,7 @@
 import pytest
 import yaml
 
+
 class TestDemo(object):
 
     @pytest.mark.parametrize("x,y",
