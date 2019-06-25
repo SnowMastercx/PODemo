@@ -100,7 +100,7 @@ class TestXueqiuAndroidLogin(object):
         caps["appActivity"] = ".view.WelcomeActivityAlias"
         # 为了更快的启动，并保留之前的数据，从而可以保存上一个case执行后的状态
         caps['noReset'] = True
-        caps['chromedriverExecutableDir'] = "/Users/seveniruby/projects/chromedriver/2.20"
+        caps['chromedriverExecutableDir'] = "~/project/chromedriver"
         # caps["udid"]="emulator-5554"
 
         driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)

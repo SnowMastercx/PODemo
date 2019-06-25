@@ -56,7 +56,7 @@ class TestXueqiuAndroid(object):
             "//*[contains(@resource-id,'indicator')]//*[@text='基金']")
         action = TouchAction(self.driver)
         for i in range(5):
-            action .press(
+            action.press(
                 x=rect['width'] *
                 0.8,
                 y=rect['height'] *
@@ -64,7 +64,7 @@ class TestXueqiuAndroid(object):
                 x=rect['width'] *
                 0.2,
                 y=rect['height'] *
-                0.2) .release() .perform()
+                0.2).release().perform()
             time.sleep(2)
             self.driver.get_screenshot_as_file(str(i) + ".png")
 
