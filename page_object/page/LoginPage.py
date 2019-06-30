@@ -32,7 +32,7 @@ class LoginPage(BasePage):
         # self.find(self._login_account).send_keys(account)
         # self.find(self._login_password).send_keys(password)
         # self.find(self._button_next).click()
-
+        
         self.loadSteps(
             "../data/LoginPage.yaml",
             "loginByPassword",

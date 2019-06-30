@@ -6,7 +6,7 @@ install_app:
   caps:
     android:
       platformName: android
-      deviceName: hogwarts
+      deviceName: emulator-5554
       appPackage: com.xueqiu.android
       appActivity: .view.WelcomeActivityAlias
       autoGrantPermissions: true
@@ -20,11 +20,10 @@ restart_app:
   caps:
     android:
       platformName: android
-      deviceName: hogwarts
+      deviceName: emulator-5554
       appPackage: com.xueqiu.android
       appActivity: .view.WelcomeActivityAlias
       autoGrantPermissions: true
-      noReset: true
       unicodeKeyboard: true
       resetKeyboard: true
     ios: {}

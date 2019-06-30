@@ -10,9 +10,10 @@ class TestLogin(object):
     def setup_method(self):
         self.loginPage = self.profilePage.gotoLogin()
 
+    # 首次在设备上登录，会触发图片验证码，可先登录一次，则不好影响case运行
     @pytest.mark.parametrize("user, pw, msg", [
         ("156005347600", "111111", "手机号码"),
-        ("15600534760", "123456", "密码错误")
+        ("15302462430", "123456", "密码错误")
     ])
     def test_login_password(self, user, pw, msg):
         self.loginPage.loginByPassword(user, pw)
